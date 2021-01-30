@@ -29,6 +29,10 @@ h1 {
   background: #a052d9 !important;
 }
 
+.bg-yellow {
+  background: #fdd831;
+}
+
 h1 span {
   text-decoration: underline;
   text-decoration-color: #fdd831;
