@@ -1,7 +1,12 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>RentalsPoint</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rentals Point</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
@@ -10,6 +15,20 @@
   </head>
 
   <body>
+    <nav class="container d-flex justify-content-between py-3">
+      <a href="#" class="logo nav-link text-dark font-weight-bold">Rentals<span class="text-purple">Point.</span></a>
+      <ul class="d-flex">
+        <li><a href="#" class="nav-link text-muted">Search for a Rental</a></li>
+        <li style="text-decoration: underline;"><a href="#" class="nav-link text-purple">Login</a></li>
+      </ul>
+    </nav>
+
     <%= yield %>
+
+    <footer></footer>
+    <script
+      src="https://kit.fontawesome.com/7290f27402.js"
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>
