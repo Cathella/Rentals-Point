@@ -3,10 +3,10 @@ body {
 }
 
 .intro-bg {
-  background-image: url('/assets/andrea-davis-7450hH--84M-unsplash.jpg');
+  background-image: url('/assets/rental.jpg');
   background-size: cover;
   background-position: center bottom;
-  height: 550px;
+  height: 600px;
 }
 
 ul {

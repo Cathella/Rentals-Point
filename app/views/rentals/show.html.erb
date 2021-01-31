@@ -1,19 +1,44 @@
-<p id="notice"><%= notice %></p>
+<main class="container">
+  <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Name:</strong>
-  <%= @rental.name %>
-</p>
+  <div class="row">
+    <div class="col-lg-6">
+      <div class="bg-light rounded border" style="height: 400px"></div>
+    </div>
+    <div class="col-lg-6">
+      <h1 class="mt-4 mb-3">
+        <%= @rental.name %>
+      </h1>
 
-<p>
-  <strong>Location:</strong>
-  <%= @rental.location %>
-</p>
+      <p class="text-muted">
+        <strong class="text-dark">Description:</strong><br>
+        <%= @rental.description %>
+      </p>
 
-<p>
-  <strong>Price:</strong>
-  <%= @rental.price %>
-</p>
+      <p class="text-muted">
+        <strong class="text-dark">Location:</strong><br>
+        <%= @rental.location %>
+      </p>
 
-<%= link_to 'Edit', edit_rental_path(@rental) %> |
-<%= link_to 'Back', rentals_path %>
+      <div class="d-flex">
+        <p class="mr-5 text-muted">
+          <strong class="text-dark">Price:</strong> Ugx.
+          <%= @rental.price %>
+        </p>
+
+        <p class="mr-5 text-muted">
+          <strong class="text-dark">Bedrooms:</strong>
+          <%= @rental.bed %>
+        </p>
+
+        <p class="text-muted">
+          <strong class="text-dark">Baths:</strong>
+          <%= @rental.shower %>
+        </p>
+      </div>
+
+      <%= link_to 'Edit', edit_rental_path(@rental) %> |
+      <%= link_to 'Back', rentals_path %>
+    </div>
+  </div>
+</div>
