@@ -8,16 +8,33 @@
   <div class="mt-5">
     <div class="row">
       <% @rentals.each do |rental| %>
-        <div class="col-lg-3">
-          <div class="bg-light rounded mb-4 py-5 text-center">Image</div>
-          <div>
-            <%= rental.name %>
-          </div>
-          <div>
-            <%= rental.location %>
-          </div>
-          <div>
-            Ugx. <%= rental.price %> / Month
+        <div class="col-lg-4">
+          <div class="bg-white shadow rounded">
+            <div class="bg-light rounded mb-3 text-center border-bottom" style="height: 200px">
+            </div>
+            <div class="ml-3 font-weight-bold font-medium">
+              <%= rental.name %>
+            </div>
+            <div class="d-flex justify-content-between align-items-center mx-3 mt-3 mb-2">
+              <div class="">
+                <i class="fas text-muted fa-lg fa-bed"></i> 4
+              </div>
+              <div class="">
+                <i class="fas text-muted fa-lg fa-shower"></i> 2
+              </div>
+              <div class="text-muted">
+                <span class="text-red font-weight-bold">Ugx. <%= rental.price %></span>
+                /month
+              </div>
+            </div>
+            <div class="d-flex justify-content-between align-items-center">
+              <p class="text-muted ml-3">
+                <i class="fas fa-map-marker-alt mr-2"></i><%= rental.location %>
+              </p>
+              <a href="#" class="py-3 w-25 text-center bg-green-light rounded-0">
+                <i class="fas fa-lg text-green fa-long-arrow-alt-right"></i>
+              </a>
+            </div>
           </div>
         </div>
       <% end %>

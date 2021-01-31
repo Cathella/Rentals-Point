@@ -21,16 +21,39 @@ h1 {
   font-size: 1.2em;
 }
 
+/* Text-color */
 .text-purple {
   color: #a052d9;
 }
 
+.text-green {
+  color: #23554c;
+}
+
+.text-red {
+  color: #c9695b;
+}
+
+/* Backgrounds */
 .bg-purple {
   background: #a052d9 !important;
 }
 
 .bg-yellow {
   background: #fdd831;
+}
+
+.bg-green-light {
+  background: #e5edf0;
+}
+
+.bg-red-light {
+  background: #faf4f4;
+}
+
+/* Font-size */
+.font-medium {
+  font-size: 1.2em
 }
 
 h1 span {
