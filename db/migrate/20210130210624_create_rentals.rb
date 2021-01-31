@@ -3,7 +3,10 @@ class CreateRentals < ActiveRecord::Migration[5.2]
     create_table :rentals do |t|
       t.string :name
       t.string :location
-      t.string :price
+      t.integer :price
+      t.integer :bed
+      t.integer :shower
+      t.text :description
 
       t.timestamps
     end
