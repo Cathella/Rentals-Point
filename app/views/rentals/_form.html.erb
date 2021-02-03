@@ -1,0 +1,49 @@
+<%= form_with(model: rental, local: true) do |form| %>
+  <% if rental.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(rental.errors.count, "error") %> prohibited this rental from being saved:</h2>
+
+      <ul>
+      <% rental.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field mb-3">
+    <%= form.label :name, "Property Name" %>
+    <%= form.text_field :name, class: "form-control" %>
+  </div>
+
+  <div class="field mb-3">
+    <%= form.label :location %>
+    <%= form.text_field :location, class: "form-control" %>
+  </div>
+
+  <div class="field mb-3">
+    <%= form.label :description, "Description" %>
+    <%= form.text_area :description, class: "form-control" %>
+  </div>
+
+  <div class="field mb-3">
+    <div class="row">
+      <div class="col-lg-4">
+        <%= form.label :price, "Price per month" %>
+        <%= form.text_field :price, class: "form-control" %>
+      </div>
+      <div class="col-lg-4">
+        <%= form.label :bed, "Bedrooms" %>
+        <%= form.text_field :bed, class: "form-control" %>
+      </div>
+      <div class="col-lg-4">
+        <%= form.label :shower, "Showers" %>
+        <%= form.text_field :shower, class: "form-control" %>
+      </div>
+    </div>
+  </div>
+
+  <div class="actions mt-3">
+    <%= form.submit "Submit Property", class: "btn bg-purple text-white" %>
+  </div>
+<% end %>

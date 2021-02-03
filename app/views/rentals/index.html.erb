@@ -1,0 +1,41 @@
+<main class="container">
+  <p id="notice"><%= notice %></p>
+  <div class="d-flex justify-content-between align-items-center">
+    <h1 class="font-weight-bold">Popular Searches</h1>
+    <%= link_to 'List a Rental', new_rental_path, class: "btn bg-yellow font-weight-bold px-4 shadow" %>
+  </div>
+
+  <div class="mt-5">
+    <div class="row">
+      <% @rentals.each do |rental| %>
+        <div class="col-lg-4">
+          <div class="bg-white border rounded">
+            <div class="bg-light rounded mb-3" style="height: 230px">
+            </div>
+            <div class="ml-3 font-weight-bold font-medium">
+              <%= link_to rental.name, rental, class: "text-dark" %>
+            </div>
+            <div class="d-flex justify-content-between align-items-center mx-3 mt-3 mb-2">
+              <div class="">
+                <i class="fas text-muted fa-lg fa-bed"></i> <%= rental.bed %>
+              </div>
+              <div class="">
+                <i class="fas text-muted fa-lg fa-shower"></i> <%= rental.shower %>
+              </div>
+              <div class="text-muted">
+                <span class="text-red font-weight-bold">Ugx. <%= rental.price %></span>
+                /month
+              </div>
+            </div>
+            <div class="d-flex justify-content-between align-items-center">
+              <p class="text-muted ml-3">
+                <i class="fas fa-map-marker-alt mr-2"></i><%= rental.location %>
+              </p>
+              <%= link_to '<i class="fas fa-lg text-green fa-long-arrow-alt-right"></i>'.html_safe, rental, class: "py-3 text-center w-25 bg-green-light" %>
+            </div>
+          </div>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</main>
