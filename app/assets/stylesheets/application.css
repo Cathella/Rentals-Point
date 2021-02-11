@@ -56,11 +56,6 @@ h1 {
   font-size: 1.2em
 }
 
-h1 span {
-  text-decoration: underline;
-  text-decoration-color: #fdd831;
-}
-
 p {
   line-height: 2em;
 }
