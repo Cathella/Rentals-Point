@@ -1,6 +1,12 @@
-<main class="container">
+<main>
   <h1 class="font-weight-bold mb-4">
     List a Property.
   </h1>
-  <%= render 'form', rental: @rental %>
-</div>
+  <div class="row">
+    <div class="col-lg-7">
+      <div class="bg-light p-5">
+        <%= render 'form', rental: @rental %>
+      </div>
+    </div>
+  </div>
+</main>

@@ -18,14 +18,22 @@
     <nav class="container d-flex justify-content-between py-3">
       <a href="/" class="logo text-dark font-weight-bold">Rentals<span class="text-purple">Point.</span></a>
       <ul class="d-flex">
-        <li><a href="#" class="nav-link text-muted">Search for a Rental</a></li>
+        <li><a href="/rentals" class="nav-link text-muted">Search for a Rental</a></li>
         <li style="text-decoration: underline;"><a href="#" class="nav-link text-purple">Login</a></li>
       </ul>
     </nav>
 
+    <div class="container">
     <%= yield %>
+    </div>
 
-    <footer></footer>
+    <footer class="text-muted text-center py-4 bg-light mt-5">
+      <div class="container">
+        <small>&copy; 2021 RentalsPoint. All rights reserved.</small>
+        <small class="ml-4">Crafted with love by <a href="https://cathella.github.io/" class="text-purple font-weight-bold">Nakitto Catherine</a>.</small>
+      </div>
+    </footer>
+
     <script
       src="https://kit.fontawesome.com/7290f27402.js"
       crossorigin="anonymous"
